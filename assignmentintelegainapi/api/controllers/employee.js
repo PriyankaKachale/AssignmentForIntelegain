@@ -27,7 +27,7 @@ exports.add_employee = (req, res) => {
         } else {
             console.log(result.length);
             if (result.length == 0) {
-                dbConnection.query("INSERT INTO employee(first_name,email,mobile_no,designation,added_by,employeeId,isactive) VALUES (?,?,?,?,?,?,?);", [req.body.first_name, req.body.email, req.body.mobile, req.body.designation, req.body.added_by, req.body.employeeId, 1], function (error1, result1, fields1) {
+                dbConnection.query("INSERT INTO employee(first_name,email,mobile_no,designation,added_by,employeeId,isactive) VALUES (?,?,?,?,?,?,?);", [req.body.first_name, req.body.email, req.body.mobile_no, req.body.designation, req.body.added_by, req.body.employeeId, 1], function (error1, result1, fields1) {
                     if (error1) {
                         throw error1;
                     } else {

@@ -9,7 +9,7 @@ import { ToastrModule } from 'ngx-toastr';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HttpModule } from '@angular/http';
 import {HttpClientModule} from '@angular/common/http';
-
+import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
   declarations: [LayoutComponent, EmployeeComponent,TreeviewComponent],
@@ -20,6 +20,7 @@ import {HttpClientModule} from '@angular/common/http';
      HttpClientModule,
      HttpModule,
     NgbModule,
+    DataTablesModule,
     ToastrModule.forRoot()
   ],
   providers: [

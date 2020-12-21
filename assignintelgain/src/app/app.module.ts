@@ -10,6 +10,9 @@ import {HttpClientModule} from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { ServiceService } from './service.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DataTablesModule } from 'angular-datatables';
+
+
 
 
 @NgModule({
@@ -27,6 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    DataTablesModule,
     ToastrModule.forRoot(),
   ],
   providers: [ServiceService],

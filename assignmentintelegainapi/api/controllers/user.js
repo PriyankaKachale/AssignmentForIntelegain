@@ -136,6 +136,40 @@ exports.user_login = (req, res, next) => {
 
 }
 
+exports.get_admin_users = (req, res) => {
+    dbConnection.query("SELECT * FROM users WHERE role= 'admin' ", function (error, result, fields) {
+        if (error) {
+            console.log(error);
+            res.status(500).json({
+                success: false,
+                error: error
+            });
+        } else {
+            res.status(200).json({
+                success: true,
+                data: result
+            })
+        }
+    });
+}
+
+exports.get_all_users = (req, res) => {
+    dbConnection.query("SELECT * FROM users WHERE role= 'user' ", function (error, result, fields) {
+        if (error) {
+            console.log(error);
+            res.status(500).json({
+                success: false,
+                error: error
+            });
+        } else {
+            res.status(200).json({
+                success: true,
+                data: result
+            })
+        }
+    });
+}
+
 
 
 
